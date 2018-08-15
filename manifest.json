@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "UGYT",
+  "version": "0.0.1",
+  "description": "An extension that adds the option on an UltimateGuitar page to listen to the relevant song on Youtube.",
+  "web_accessible_resources": ["YT.png"],
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+  "content_scripts": [
+   {
+     "matches": [
+        "http://*.ultimate-guitar.com/*",
+        "https://*.ultimate-guitar.com/*"
+     ],
+     "js": ["content.js"]
+   }
+ ],
+ "permissions": [
+    "http://*.youtube.com/*",
+    "https://*.youtube.com/*",
+    "http://*.youtu.be/*",
+    "https://*.youtu.be/*",
+  ]
+}
